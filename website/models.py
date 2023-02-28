@@ -1,21 +1,18 @@
 from sqlalchemy import func
-from . import db 
 from flask_login import UserMixin
-
-class Note(db.Model):
-    id = db.Column(db.Integer, primary_key =True,autoincrement=True)
-    data = db.Column(db.String(10000))
-    date = db.Column(db.DateTime(timezone=True), default=func.now())
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-
+from . import db 
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key =True,autoincrement=True)
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
-    first_name = db.Column(db.String(150))
-    note = db.relationship('Note')
+    name = db.Column(db.String(150))
 
-
-
-
+class Product(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key =True,autoincrement=True)
+    name = db.Column(db.String(150), unique=True)
+    type = db.Column(db.String(150))
+    category = db.Column(db.String(150))
+    wilaya = db.Column(db.String(150))
+    production_qte = db.Column(db.Integer)
+    consommation_qte = db.Column(db.Integer)

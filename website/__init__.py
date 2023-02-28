@@ -3,10 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
 
-
 db = SQLAlchemy()
 DB_NAME = "database.db"
-
 
 def create_app():
     app = Flask(__name__)
@@ -14,15 +12,14 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ipdnwmwj:BKXx8NDp8mZ2J1sZmYi3vWJUknzBFnNN@trumpet.db.elephantsql.com/ipdnwmwj'
     db.init_app(app)
 
-
-
     from .views import views
     from .auth import auth
+
 
     app.register_blueprint(views, url_prefixe="/")
     app.register_blueprint(auth, url_prefixe="/")
 
-    from .models import User, Note
+    from .models import User
 
     create_database(app)
 
