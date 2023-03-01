@@ -5,27 +5,34 @@
       window.open('/produit?id=' + id);
     }
   </script>
-  <style>
-    .product-container {
-      display: flex;
-      row-gap: 2rem;
-      flex-direction: column;
-      cursor: pointer;
-    }
+  
 
-    .product-row {
-      width: fit-content;
-      display: flex;
-      column-gap: 2rem;
-      font-size: 0.7rem;
-      border: 2px solid gray;
-      border-radius: 1rem;
-      padding: 0.5rem 1rem;
-    }
-  </style>
-  <h3>List Des Produits</h3>
+<style>
+  .product-container {
+    display: flex;
+    row-gap: 2rem;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .product-row {
+    width: fit-content;
+    display: flex;
+    column-gap: 2rem;
+    font-size: 0.7rem;
+    border: 2px solid rgb(55, 48, 151);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+  
+  
+  
+  }
+</style>
+  
+
+  <h3><b>Liste des Produits</b></h3><br>
   <form>
-    <input placeholder="Recherchez votre produit ici..." name="search" />
+    <input placeholder="Recherchez votre produit ici..." name="search" img="" />
     <button type="submit">Rechercher</button>
   </form>
   <div class="product-container">

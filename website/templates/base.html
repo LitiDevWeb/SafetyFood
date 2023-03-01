@@ -37,7 +37,7 @@
         <div class="navbar-nav">
 
           {% if user.is_authenticated %}
-          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <a class="nav-item nav-link" id="home" href="/produits">Produits</a>
           <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           {% else %}
           <a class="nav-item nav-link" id="home" href="/">Home</a>
@@ -72,6 +72,9 @@
 
 
     <div class="container">{% block content %}{% endblock %}</div>
+
+          <img src="../static/image/background2.jpg" width="1400px" height="500px">
+         
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -87,6 +90,27 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+
+
+     <div>
+      <footer id="contact"> 
+      <h1 style="font-size: medium; color:aliceblue ;padding:20px">DZ-DISTRIBUTION-ALIMENTAIRE</span></h1>
+      
+        <div class="contact" >
+            <p style="text-align: center; font-size: 20px; color:aliceblue ; padding-top:25px"><br>15000 Tizi Ouzou, Alg&eacute;rie </p>
+            <p style="font-size: 20px; color: white;">contact: </p>
+            <ol>
+                <li><a href="https://www.facebook.com/"><img src="../static/image/facebook.png"/></a></li>
+                <li><a href="https://www.instagram.com/"><img src="../static/image/instagram.png"/></a></li>
+                <li><a href="https://www.linkedin.com/"><img src="../static/image/linkedin.png"/></a></li>
+                <li><a href="https://twitter.com/"><img src="../static/image/twitter.png"/></a></li>
+            </ol>
+            </div>
+      </footer>
+      </div>
+      
+    
 
     
     
